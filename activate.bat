@@ -1,0 +1,1 @@
+D:\flaskEnv\Scripts\activate
