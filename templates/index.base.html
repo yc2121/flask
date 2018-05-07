@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>TMNT</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="static/dojo.js"></script> -->
+</head>
+<body>
+  {% if msg %}
+    <h2>{{msg}}</h2>
+  {% elif imgSrc %}
+    <img src='/static/img/{{imgSrc}}' alt={{useThis}}>
+  {% else %}
+    <h2>Something wrong</h2>
+  {% endif %} 
+</body>
+</html>

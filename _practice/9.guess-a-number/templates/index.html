@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/style.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <h2>I am thinking of a number between 1 and 100</h2>
+    <h3>Take a guess</h3>
+
+    <!-- Comment out the following statement for production-->
+    <p>(For testing, the random number is shown here and {{session['theNumber']}})</p>
+    
+    {% if session['reset'] %}
+      <form id='win' method="post" action="/">
+        <h1>{{session['msg']}}</h1>
+        <input type='submit' value='Play again!'>
+      </form>
+    {% else %}
+      {% if session['msg'] %}
+        <h1 id='info'>{{session['msg']}}</h1>
+      {% endif %}
+      <form method="post" action="/">
+        <input type="text" name='guess'>
+        <p><input type='submit' value='Submit'></p>
+      </form>
+    {% endif %}
+  </body>
+</html>

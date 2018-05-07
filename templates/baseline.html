@@ -1,11 +1,16 @@
-<html>
-    <head>
-      {% if title %}
-      <title>{{ title }}</title>
-      {% else %}
-      <title>Baseline</title>
-      {% endif %}
-    </head>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script rel='stylesheet' src="ninja.css"></script> -->
+  <script src="static/dojo.js"></script>
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>Baseline</title>
+  {% endif %}
+</head>
     <body>
         <div><a href="http://yungchou.wordpress.com">Yung Chou</a></div>
         <hr>
